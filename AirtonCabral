@@ -1,0 +1,58 @@
+#include <stdio.h>
+void mover_torre(int casas) {
+    printf("TORRE - Movimento para a DIREITA (usando FOR):\n");
+    for(int i = 0; i < casas; i++ ) {
+        printf("DIREITA \n");
+    };
+}
+
+void mover_bispo(int casas) {
+    printf("\n");
+    printf("BISPO - Movimento para a DIREITA,CIMA (usando WHILE):\n");
+     int contador_bispo = 0;
+    while(contador_bispo < casas) {
+        printf("DIREITA , CIMA \n");
+        contador_bispo++;
+    }
+}
+
+void mover_rainha(int casas){
+    printf("\n");
+    printf("RAINHA - Movimento para a ESQUERDA (usando DO WHILE):\n");
+    int contador_rainha = 0;
+    do { 
+        printf("ESQUERDA \n");
+        contador_rainha++;
+    } while(contador_rainha < casas);
+}
+
+void mover_cavalo(int casas) {
+    printf("\n");
+    printf("CAVALHO - Movimento para a BAIXO ESQUERDA (usando FOR e WHILE):\n");
+    for(int x = 0; x < casas; x++ ) {
+        printf("BAIXO \n");
+        while (x == 1) { 
+            printf("ESQUERDA \n");
+            x++;
+        }
+        
+    };
+}
+
+int main () {
+    // variaveis de casas por peça
+    int casas_torre = 5;
+    int casas_bispo = 5;
+    int casas_rainha = 8;
+    int casas_cavalo = 2;
+
+    mover_torre(casas_torre);
+
+    mover_bispo(casas_bispo);
+
+    mover_rainha(casas_rainha);
+
+    mover_cavalo(casas_cavalo);
+    
+     return 0;
+}
